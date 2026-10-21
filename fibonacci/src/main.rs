@@ -1,9 +1,9 @@
 use std::io;
 
 fn main() {
-  println!("Please input a non-negative integer.");
-
   let n: u32 = loop {
+    println!("Please input a non-negative integer.");
+
     let mut input = String::new();
 
     io::stdin()
@@ -13,7 +13,6 @@ fn main() {
     match input.trim().parse() {
       Ok(num) => break num,
       Err(_) => {
-        println!("Please input a non-negative integer.");
         continue;
       }
     };
